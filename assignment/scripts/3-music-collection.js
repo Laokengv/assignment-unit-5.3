@@ -15,9 +15,9 @@ let albums = {
 console.log('Adding first album:', addToCollection('Social Cues', 'Cage The Elephant', '2019'));
 console.log('Adding second album:', addToCollection('KOD', 'J. Cole', '2018'));
 console.log('Adding third album:', addToCollection('In Return', 'Odesza', '2014'));
-console.log('Adding fourth album:', addToCollection('Circles', 'Mac Miller', '2020'));
-console.log('Adding fifth album:', addToCollection('On Top of The Covers', 'T-Pain', '2023'));
-console.log('Adding sixth album:', addToCollection('Goblin', 'Tyler the Creator', '2011'));
+console.log('Adding fourth album:', addToCollection('On Top of The Covers', 'T-Pain', '2023'));
+console.log('Adding fifth album:', addToCollection('IGOR', 'Tyler, the Creator', '2019'));
+console.log('Adding sixth album:', addToCollection('Goblin', 'Tyler, the Creator', '2011'));
 
 console.log(collection);
 
@@ -28,6 +28,5 @@ function showCollection(array){
     }
   }
   
-  // console.log(showCollection(collection));
-  
+  console.log(showCollection(collection));
   
