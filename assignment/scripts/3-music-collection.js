@@ -30,3 +30,17 @@ function showCollection(array){
   
   console.log(showCollection(collection));
   
+function search() {
+
+}
+
+function findByArtist(artist){
+    let result = [];
+    for(i in collection){
+      if(artist === collection[i].artist){
+        result.push(collection[i]);
+      }
+    }
+  }
+  console.log(findByArtist(collection));
+  
