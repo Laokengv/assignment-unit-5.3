@@ -19,28 +19,50 @@ console.log('Adding fourth album:', addToCollection('On Top of The Covers', 'T-P
 console.log('Adding fifth album:', addToCollection('IGOR', 'Tyler, the Creator', '2019'));
 console.log('Adding sixth album:', addToCollection('Goblin', 'Tyler, the Creator', '2011'));
 
-console.log(collection);
+// console.log(collection);
 
-function showCollection(array){
-    console.log('Number of songs in the collecton: ${array.length}');
-    for(let i of array){
-      console.log('${array[i].title} by ${array[i].artist}, published in ${array[i].yearPublished}');
+function showCollection(albums){
+    console.log(`Number of songs in the collecton: ${albums.length}`);
+    for(let album of albums){
+      console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
     }
   }
   
   console.log(showCollection(collection));
   
-function search() {
 
-}
+  function findByArtist(artist){
+   let result  = [];
+   for (let album of collection) {
+    if (match.artist === artist) {
+    result.push(album);
+    console.log(findByArtist(collection));
+    }
+   } 
+   return result;
+  }
 
-function findByArtist(artist){
-    let result = [];
-    for(i in collection){
-      if(artist === collection[i].artist){
-        result.push(collection[i]);
+  function search(item) {
+    let searchResults = [];
+    for (let album of collection) {
+      if (album.artist === item || album.yearPublished === item) {
+        searchResults.push('artist:' + album.artist + ', year:' + album.yearPublished);
+      } else {
+        searchResults;
       }
     }
+    if(!item) {
+      searchResults.push(collection);
+    }
+    return searchResults;
   }
-  console.log(findByArtist(collection));
-  
+
+  //Testing search function
+  console.log(search('Odesza'));
+  console.log(search('T-Pain'));
+  console.log(search('Tyler, the Creator'));
+  console.log(search('J Cole'));
+  console.log(search());
+
+
+
